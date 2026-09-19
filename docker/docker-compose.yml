@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  cloudcostguard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-mock_key}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-mock_secret}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL:-}
+    volumes:
+      - ../reports:/app/reports
+    command: ["scan", "--demo", "--html", "/app/reports/docker_audit.html", "--json-output", "/app/reports/docker_audit.json"]

@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/build/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Generated reports (keep docs/index.html for GitHub Pages)
+reports/
+sample_report.html
+sample_report.json
+
+# OS files
+.DS_Store
+Thumbs.db
